@@ -1,0 +1,367 @@
+/* sheared style  */
+* {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+#btn-primary{
+    width: 200px;
+    height: 60px;
+    border: 1px solid #458FF6;
+    color: #458FF6;
+    border-radius: 55px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* navber style  */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 190px;
+}
+#t{
+    color: white;
+    background-color: #458FF6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#trafalgar{
+    color: #233348;
+    font-size: 24px;
+}
+.nav-items {
+    width: 545px;
+    height: 23px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-right:190px ;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #7D7987;
+} 
+/* banner style  */
+.banner{
+    display: flex;
+    justify-content: space-around;
+    gap: 108px;
+}
+.banner-text{
+    width: 445px;
+    height: 338px;
+    align-items: center;
+    text-align: left;
+    margin-top: 275px;
+    margin-left: 170px;
+}
+.banner-text h3{
+    font-size: 48px;
+    font-weight: bold;
+}
+.banner-text p{
+    color: #7D7987;
+}
+.banner-image{
+    margin-top: 177px;
+    margin-right: 160px;
+}
+/* our services style  */
+.services-section{
+    margin-top: 190px;
+}
+.services-section button{
+    align-items: center;
+    text-align: center;
+    margin-left: 700px;
+    margin-right: 700px;
+}
+.services-text h3{
+    font-size: 36px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+.services-text p{
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+    color: #7D7987 ;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    width: 1120px;
+    margin-left: 240px;
+    margin-right: 240px;
+    align-items: center;
+}
+.card-item{
+    border-radius: 20px;
+    width: 350px;
+    height: 354px;
+    padding-left: 37px;
+}
+.card-item img{
+   width: 90px;
+   height: 90px;
+   align-items: center;
+   text-align: left;
+   margin-top: 54px;
+   margin-left: 37px;
+}
+.cards h4{
+    font-size:24px ;
+    font-weight: bold;
+}
+.cards p{
+     font-size:16px ;
+    font-weight: lighter;
+    width: 261px;
+}
+/* heathcare section style  */
+.healthcare-section{
+    width: 1273px;
+    height: 477px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 220px;
+    margin-left: 132px;
+    margin-right: 192px;
+    gap:137px ;
+}
+.healthcare-image{
+    width: 650px;
+    height: 477px;
+}
+.healthcare-text{
+    width: 486px;
+    height: 388px;
+    align-items: center;
+    text-align: left;
+    margin-top: 57px;
+    margin-bottom: 32px;
+}
+.healthcare-text h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 59px;
+}
+.healthcare-text p{
+    font-size: 18px;
+    margin-bottom: 37px;
+
+}
+/* Download our mobile apps style */
+.download-section{
+    width: 1365px;
+    height: 675px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-left: 280px;
+    gap:71px ;
+}
+.download-image{
+    width: 665px;
+    height: 434px;
+    margin-right: 164px;
+    
+}
+.download-text{
+    width: 420px;
+    height: 375px;
+    align-items: center;
+    text-align: left;
+    margin-top: 36px;
+    margin-bottom: 23px;
+    
+}
+.download-text h3{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 63px;
+}
+.download-text p{
+    font-size: 18px;
+    margin-bottom: 40px;
+
+}
+/* customer are saying style  */
+.customer-section{
+    width: 1120px;
+    height: 425px;
+    background-color: #458FF6;
+    border-radius: 24px;
+    color: white;
+    margin-left: 242px;
+    margin-right: 238px;
+
+}
+.customer-header h3{
+    font-size: 36px;
+    text-align: center;
+    align-items: center;
+    padding-top: 64px;
+}
+.customer-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.customer-image{
+    width: 133px;
+    height: 133px;
+    margin: 90px 33px 90px 118px;
+}
+.customer-sub-title{
+   display: flex;
+}
+.sub-title{
+    margin-top: 100px;
+    margin-bottom:90px;
+    text-align: left;
+    line-height: 5px;
+}
+.sub-title h4{
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+.sub-title p{
+    font-size: 18px;
+}
+.customer-text{
+    width: 420px;
+    height: 120px;
+    font-size: 19px;
+   text-align: left;
+    margin-left:100px;
+    margin-bottom: 50px;
+}
+.arrow-nav{
+    width: 336px;
+    height: 20px;
+    margin-left: 633px;
+    margin-right: 633px;
+    margin-top: 42px;
+}
+/* latest article style  */
+.article-section{
+    margin-top: 216px;
+   
+}
+.article-section h3{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+
+}
+.article-cards{
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    height: 512px;
+    gap: 34px;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+.article-card img {
+    border-radius: 20px;
+}
+.article-card{
+    border-radius: 20px;
+}
+.article-card-text{
+    width: 250px;
+}
+.article-card-text h4{
+    font-size: 21px;
+    font-weight: bold;
+    text-align: left;
+}
+.article-card-text p{
+    font-size: 16px;
+    text-align: left;
+    font-weight: lighter;
+    color: #7D7987;
+}
+.article-card-text h5{
+    font-size: 17px;
+    font-weight: 600px;
+    color: #458FF6;
+}
+.article-section button{
+    margin-left: 700px;
+    margin-right: 700px;
+
+}
+/* footer style  */
+footer{
+    width: 100%;
+    height: 430px;
+    background-color: #bc266e;
+    color: white;
+    display: flex;
+    margin-top: 200px;
+ 
+}
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.t{
+    color: #b61a84;
+    background-color: rgb(136, 23, 110);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.fotter-logo-text{
+    width: 390px;
+    height: 200px;
+    margin-top:118px ;
+    margin-bottom: 113px;
+    margin-left: 190px;
+}
+.footer-list{
+    width: 660px;
+    height: 215px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-bottom: 90px;
+    margin-left: 200px;
+    text-align: left;
+    align-items: center;
+}
+.company {
+    line-height: 30px;
+}
+.region{
+    line-height: 30px;
+
+}
+.help{
+    line-height: 30px;
+
+}
