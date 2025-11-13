@@ -1,199 +1,509 @@
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trafalgar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trafalgar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* 🌐 BASE STYLES */
+    body {
+      font-family: "Mulish", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1f1534;
+      background-color: #ffffff;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      box-sizing: border-box;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #t {
+      background-color: #458ff6;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 50%;
+    }
+
+    .nav-items {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #1f1534;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-items a:hover {
+      color: #458ff6;
+    }
+
+    /* ---------- BANNER ---------- */
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      flex-wrap: wrap;
+    }
+
+    .banner-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .banner-text h3 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .banner-text p {
+      font-size: 16px;
+      color: #7d7987;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #458ff6;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #3878d0;
+    }
+
+    .banner-image img {
+      max-width: 100%;
+    }
+
+    /* ---------- SERVICES SECTION ---------- */
+    .services-section {
+      text-align: center;
+      padding: 80px 40px;
+      background-color: #f9f9f9;
+    }
+
+    .services-section h3 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .services-section p {
+      color: #7d7987;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 60px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card-item {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .card-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .card-item h4 {
+      margin: 20px 0 10px;
+    }
+
+    .card-item p {
+      color: #7d7987;
+    }
+
+    /* ---------- HEALTHCARE SECTION ---------- */
+    .healthcare-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 60px;
+      flex-wrap: wrap;
+    }
+
+    .healthcare-image img {
+      max-width: 100%;
+    }
+
+    .healthcare-text {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    .healthcare-text h3 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- DOWNLOAD SECTION ---------- */
+    .download-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 60px;
+      flex-wrap: wrap;
+    }
+
+    .download-image img {
+      max-width: 100%;
+    }
+
+    /* ---------- CUSTOMER SECTION ---------- */
+    .customer-section {
+      background-color: #458ff6;
+      color: white;
+      text-align: center;
+      padding: 80px 40px;
+      border-radius: 20px;
+      margin: 60px;
+    }
+
+    .customer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .customer-text p {
+      font-style: italic;
+    }
+
+    /* ---------- ARTICLE SECTION ---------- */
+    .article-section {
+      text-align: center;
+      padding: 80px 40px;
+    }
+
+    .article-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .article-card {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+
+    .article-card img {
+      width: 100%;
+    }
+
+    .article-card-text {
+      padding: 20px;
+    }
+
+    .article-card-text h4 {
+      margin-bottom: 10px;
+    }
+
+    .article-card-text p {
+      color: #7d7987;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background-color: #458ff6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 60px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    .footer-list {
+      display: flex;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    @media (max-width: 992px) {
+      .banner,
+      .healthcare-section,
+      .download-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .banner-text h3 {
+        font-size: 36px;
+      }
+
+      header {
+        padding: 20px 30px;
+      }
+
+      .services-section {
+        padding: 60px 20px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .nav-items {
+        display: none;
+      }
+
+      .banner-text h3 {
+        font-size: 28px;
+      }
+
+      .services-section h3,
+      .healthcare-text h3,
+      .article-section h3 {
+        font-size: 28px;
+      }
+
+      footer {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h3 id="t">T</h3>
-                <h3 id="trafalgar">Trafalgar</h3>
-            </div>
-        <div class="nav-items">
-            <a href="">Home</a>
-            <a href="">Find a doctor</a>
-            <a href="">Apps</a>
-            <a href="">Testimonials</a>
-            <a href="">About us</a>
+  <header>
+    <nav>
+      <div class="logo">
+        <h3 id="t">T</h3>
+        <h3 id="trafalgar">Trafalgar</h3>
+      </div>
+      <div class="nav-items">
+        <a href="#">Home</a>
+        <a href="#">Find a doctor</a>
+        <a href="#">Apps</a>
+        <a href="#">Testimonials</a>
+        <a href="#">About us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner -->
+    <section class="banner">
+      <div class="banner-text">
+        <h3>Virtual healthcare <br> for you</h3>
+        <p>Trafalgar provides progressive and affordable healthcare, accessible on mobile and online for everyone</p>
+        <button class="btn-primary">Consult today</button>
+      </div>
+      <div class="banner-image">
+        <img src="illustration.png" alt="Virtual healthcare illustration">
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+      <div class="services-text">
+        <h3>Our services</h3>
+        <p>We provide you the best choices for your health needs. Consult with our highly qualified doctors to choose the service suitable for you.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card-item">
+          <img src="s.png" alt="">
+          <h4>Search doctor</h4>
+          <p>Choose your doctor from thousands of specialists, generalists, and trusted hospitals.</p>
         </div>
-        </nav>
-    </header>
-    <main>
-        <!-- banner section  -->
-        <section class="banner">
-            <div class="banner-text">
-                <h3>Virtual healthcare <br> for you</h3>
-                <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone</p>
-                <button id="btn-primary">Consult today</button>
 
-            </div>
-            <div class="banner-image">
-                <img src="illustration (1).png" alt="">
-            </div>
-        </section>
-        <!-- our services section  -->
-        <section class="services-section">
-            <div class="services-text">
-                <h3>Our services</h3>
-                <p>We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment <br> with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
-            </div>
-            <div class="cards">
-                <div class="card-item">
-                    <img src="s.png" alt="">
-                    <h4>Search doctor</h4>
-                    <p>Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
-                </div>
-                <div class="card-item">
-                    <img src="m.png" alt="">
-                    <h4>Online pharmacy</h4>
-                    <p>Buy  your medicines with our mobile application with a simple delivery system</p>
-                </div>
-                <div class="card-item">
-                    <img src="n.png" alt="">
-                    <h4>Consultation</h4>
-                    <p>Free consultation with our trusted <br> doctors and get the best <br> recomendations</p>
-                </div>
-                <div class="card-item">
-                    <img src="l.png" alt="">
-                    <h4>Details info</h4>
-                    <p>Free consultation with our trusted  doctors and get the best  recomendations</p>
-                </div>
-                <div class="card-item">
-                    <img src="p.png" alt="">
-                    <h4>Emergency care</h4>
-                    <p>You can get 24/7 urgent care for yourself or your children and your lovely family</p>
-                </div>
-                <div class="card-item">
-                    <img src="r.png" alt="">
-                    <h4>Tracking</h4>
-                    <p>Track and save your medical history <br> and health data </p>
-                </div>
-            </div>
-            <button id="btn-primary">Learn more</button>
-        </section>
-        
+        <div class="card-item">
+          <img src="m.png" alt="">
+          <h4>Online pharmacy</h4>
+          <p>Buy your medicines easily with our mobile app and simple delivery system.</p>
+        </div>
 
-        <section class="healthcare-section">
-            <div class="healthcare-image">
-                <img src="trafalgar-illustration sec02 1 (1).png" alt="">
-            </div>
-            <div class="healthcare-text">
-                <h3>Leading healthcare providers</h3>
-                <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</p>
-                <button id="btn-primary">Learn more</button>
-            </div>
+        <div class="card-item">
+          <img src="n.png" alt="">
+          <h4>Consultation</h4>
+          <p>Free consultation with our trusted doctors to get the best recommendations.</p>
+        </div>
+      </div>
 
-        </section>
-<!-- Download our mobile apps section  -->
-        <section class="download-section">
-            
-            <div class="download-text">
-                <h3>Download our mobile apps</h3>
-                <p>Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p>
-                <button id="btn-primary">Download </button>
-            </div>
-            <div class="download-image">
-                <img src="bbbb.png" alt="">
-            </div>
+      <button class="btn-primary">Learn more</button>
+    </section>
 
-        </section>
-<!-- customer are saying section -->
-        <section class="customer-section">
-            <div class="customer-header">
-                <h3>What our customer are saying</h3>
-            </div>
-            <div class="customer-content">
-                <div class="customer-sub-title">
-                    <div class="customer-image">
-                        <img src="" alt="">
-                    </div>
-                    <div class="sub-title">
-                        <h4>Edward Newgate</h4>
-                        <p>Founder Circle</p>
-                    </div>
-                </div>
-                
-                
-                <div class="customer-text">
-                    <p>“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
-                </div>
-            </div>
-            
-        </section>
-        <img class="arrow-nav" src="image 2 (2).png" alt="">
-<!-- latest article section  -->
-        <section class="article-section">
-            <h3>Check out our latest article</h3>
-            <div class="article-cards">
-                <div class="article-card">
-                    <img src="image 2 (1) (1).png" alt="">
-                    <div class="article-card-text">
-                        <h4>Disease detection, check <br> up in the laboratory</h4>
-                        <p>In this case, the role of the health laboratory is very important to do a disease detection...</p>
-                        <h5>Read more</h5>
-                    </div>
-                </div>
+    <!-- Healthcare Section -->
+    <section class="healthcare-section">
+      <div class="healthcare-image">
+        <img src="trafalgar-illustration.png" alt="">
+      </div>
+      <div class="healthcare-text">
+        <h3>Leading healthcare providers</h3>
+        <p>Trafalgar provides progressive, affordable healthcare accessible on mobile and online for everyone.</p>
+        <button class="btn-primary">Learn more</button>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+      <div class="download-text">
+        <h3>Download our mobile apps</h3>
+        <p>Our dedicated patient engagement app lets you access healthcare info easily and securely.</p>
+        <button class="btn-primary">Download</button>
+      </div>
+      <div class="download-image">
+        <img src="bbbb.png" alt="">
+      </div>
+    </section>
+
+    <!-- Customer Section -->
+    <section class="customer-section">
+      <div class="customer-header">
+        <h3>What our customers are saying</h3>
+      </div>
+      <div class="customer-content">
+        <div class="customer-sub-title">
+          <h4>Edward Newgate</h4>
+          <p>Founder Circle</p>
+        </div>
+        <div class="customer-text">
+          <p>“Our patient app allows instant, secure access to your healthcare information.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="article-section">
+      <h3>Check out our latest articles</h3>
+      <div class="article-cards">
         <div class="article-card">
-            <img src="image 2 (1) (1).png" alt="">
-            <div class="article-card-text">
-                <h4>Herbal medicines that are <br> safe for consumption</h4>
-                <p>Herbal medicine is very widely used at this time because of its very good for your health...</p>
-                <h5>Read more</h5>
-            </div>
+          <img src="image1.png" alt="">
+          <div class="article-card-text">
+            <h4>Disease detection in laboratories</h4>
+            <p>Health labs play a crucial role in disease detection and prevention.</p>
+            <h5>Read more</h5>
+          </div>
         </div>
+
         <div class="article-card">
-            <img src="image 3 (2).png" alt="">
-            <div class="article-card-text">
-                <h4>Natural care for healthy <br> facial skin</h4>
-                <p>A healthy lifestyle should start from now and also for your skin health.There are some...</p>
-                <h5>Read more</h5>
-            </div>
+          <img src="image2.png" alt="">
+          <div class="article-card-text">
+            <h4>Herbal medicines that are safe</h4>
+            <p>Herbal medicines are widely used today for better health outcomes.</p>
+            <h5>Read more</h5>
+          </div>
         </div>
-    </div>
-            <button id="btn-primary">View all</button>
-        </section>
-</main>
-<footer>
+
+        <div class="article-card">
+          <img src="image3.png" alt="">
+          <div class="article-card-text">
+            <h4>Natural care for healthy skin</h4>
+            <p>Start a healthy lifestyle today for glowing and healthy skin.</p>
+            <h5>Read more</h5>
+          </div>
+        </div>
+      </div>
+      <button class="btn-primary">View all</button>
+    </section>
+  </main>
+
+  <footer>
     <div class="fotter-logo-text">
-        <div class="footer-logo">
+      <div class="footer-logo">
         <h3 class="t">T</h3>
         <h3 class="trafalgar">Trafalgar</h3>
+      </div>
+      <p>Trafalgar provides progressive and affordable healthcare, accessible on mobile and online for everyone.</p>
+      <p>©Trafalgar PTY LTD 2020. All rights reserved</p>
     </div>
-    <p>Trafalgar provides progressive, and affordable <br> healthcare, accessible on  mobile and online <br> for everyone</p>
-    <p>©Trafalgar PTY LTD 2020. All rights reserved</p>
-    </div>
-    <div class="footer-list">
-        <div class="company">
-            <h3>Company</h3>
-            About <br>
-            Testimonials <br>
-            Find a doctor <br>
-            Apps
-        </div>
-        <div class="region">
-            <h3>Region</h3>
-            Indonesia <br>
-            Singapore <br>
-            Hongkong <br>
-            Canada
-        </div>
-        <div class="help">
-            <h3>Help</h3>
-            Help center <br>
-            Contact support <br>
-            Instructions <br>
-            How it works
-    </div>
-    </div>
-    
-    
 
-</footer>
+    <div class="footer-list">
+      <div class="company">
+        <h3>Company</h3>
+        <p>About</p>
+        <p>Testimonials</p>
+        <p>Find a doctor</p>
+        <p>Apps</p>
+      </div>
+
+      <div class="region">
+        <h3>Region</h3>
+        <p>Indonesia</p>
+        <p>Singapore</p>
+        <p>Hong Kong</p>
+        <p>Canada</p>
+      </div>
+
+      <div class="help">
+        <h3>Help</h3>
+        <p>Help center</p>
+        <p>Contact support</p>
+        <p>Instructions</p>
+        <p>How it works</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
